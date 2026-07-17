@@ -391,3 +391,43 @@ footer {
   font-size: 15px;
   line-height: 1.8;
 }
+
+.speech-box{
+
+    margin-top:30px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.speech-title{
+
+    color:#80eaff;
+
+    letter-spacing:3px;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+
+}
+
+#character-speech p{
+
+    margin:12px 0;
+
+    padding-left:15px;
+
+    border-left:3px solid #80eaff;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+}

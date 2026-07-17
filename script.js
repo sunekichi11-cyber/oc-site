@@ -22,6 +22,16 @@ const characters = {
 
     image: "./images/characters/ravi.png",
 
+    speech: [
+
+    "……そうか。",
+
+    "俺は別に構わない。",
+
+    "君がそう思うなら、それでいい。"
+
+    ],
+
     authorComment:
       "こいつめっちゃ描くの楽だった！！！笑",
   }
@@ -119,6 +129,18 @@ function updateCharacterText(character) {
     document.getElementById(
     "character-second-person"
     ).textContent = character.secondPerson;
+
+    const speech =
+    document.getElementById("character-speech");
+
+    speech.innerHTML="";
+
+    character.speech.forEach(line=>{
+
+    speech.innerHTML+=`<p>「${line}」</p>`;
+
+  }
+);
 }
 
 
