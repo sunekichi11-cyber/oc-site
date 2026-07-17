@@ -32,6 +32,12 @@ const characters = {
 
     ],
 
+    likes:
+    "紅茶・星空・読書",
+
+    dislikes:
+    "騒音・虫・早起き",
+
     authorComment:
       "こいつめっちゃ描くの楽だった！！！笑",
   }
@@ -121,6 +127,14 @@ function updateCharacterText(character) {
   document.getElementById(
     "character-author-comment"
     ).textContent = character.authorComment;
+
+    document.getElementById(
+    "character-likes"
+    ).textContent = character.likes;
+
+    document.getElementById(
+    "character-dislikes"
+    ).textContent = character.dislikes;
 
     document.getElementById(
     "character-first-person"
