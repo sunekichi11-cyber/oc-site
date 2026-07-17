@@ -17,7 +17,7 @@ body {
 background: radial-gradient(
     circle at top,
     #0f3e8e,
-    #060719 60%,
+    #141757 60%,
     #050505
 );
 }
@@ -155,7 +155,7 @@ main {
 .character-info h3 {
   margin-top: 32px;
 
-  color: #29265e;
+  color: #544ec9;
 }
 
 /* プロフィール一覧 */
