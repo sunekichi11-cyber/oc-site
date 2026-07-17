@@ -3,23 +3,28 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
+body{
 
-  font-family:
-    "Yu Gothic",
-    "Meiryo",
-    sans-serif;
+background:
 
-  color: white;
+radial-gradient(
+circle at top,
+rgba(90,170,255,.25),
+transparent 45%
+),
 
-background: radial-gradient(
-    circle at top,
-    #479dee,
-    #a2d5ff 60%,
-    #e7eaf3
+radial-gradient(
+circle at bottom,
+rgba(150,70,255,.15),
+transparent 40%
+),
+
+linear-gradient(
+180deg,
+#071026,
+#03050d
 );
+
 }
 
 /* 上部タイトル */
@@ -80,38 +85,40 @@ main {
 }
 
 /* キャラクターカード */
-.character-card {
-  display: grid;
-  grid-template-columns: minmax(280px, 430px) 1fr;
+.character-card{
 
-  overflow: hidden;
+position:relative;
 
-  background: rgba(20, 14, 29, 0.8);
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 25px;
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.5);
-
-  backdrop-filter: blur(12px);
 }
 
-/* 立ち絵部分 */
-.character-image-area {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+.character-card::before{
 
-  min-height: 600px;
-  padding: 25px;
+content:"";
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(36, 59, 153, 0.25),
-      rgba(23, 13, 31, 0.2)
-    );
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(
+
+circle,
+
+rgba(72,155,255,.18),
+
+transparent 70%
+
+);
+
+z-index:-1;
+
 }
 
 .character-image-area img {
