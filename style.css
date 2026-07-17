@@ -210,3 +210,184 @@ footer {
     padding: 30px 24px;
   }
 }
+
+/* =========================
+   キャラクター選択エリア
+========================= */
+
+.character-selector {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.character-selector h2 {
+  margin-bottom: 6px;
+
+  font-size: clamp(26px, 5vw, 42px);
+  letter-spacing: 5px;
+}
+
+.selector-description {
+  margin-top: 0;
+  margin-bottom: 24px;
+
+  color: #b9adc3;
+  font-size: 14px;
+}
+
+/* アイコン一覧 */
+.character-icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: 18px;
+}
+
+/* ボタン本体 */
+.character-icon-button {
+  width: 105px;
+  padding: 8px;
+
+  color: white;
+  background: transparent;
+
+  border: none;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+/* アイコン画像 */
+.character-icon-button img {
+  display: block;
+
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 8px;
+
+  object-fit: cover;
+
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* キャラ名 */
+.character-icon-button span {
+  display: block;
+
+  overflow: hidden;
+
+  font-size: 13px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* マウスを重ねた時 */
+.character-icon-button:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.character-icon-button:hover img {
+  transform: scale(1.05);
+
+  border-color: #80eaff;
+
+  box-shadow:
+    0 0 12px rgba(74, 219, 255, 0.65),
+    0 0 28px rgba(161, 84, 255, 0.35);
+}
+
+/* 現在選択中のキャラ */
+.character-icon-button.active img {
+  border-color: #80eaff;
+
+  box-shadow:
+    0 0 14px rgba(74, 219, 255, 0.8),
+    0 0 32px rgba(161, 84, 255, 0.5);
+}
+
+/* キャラ切り替え時の演出 */
+.character-card.switching {
+  animation: characterFade 0.4s ease;
+}
+
+@keyframes characterFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 600px) {
+  .character-icon-list {
+    gap: 10px;
+  }
+
+  .character-icon-button {
+    width: 82px;
+  }
+
+  .character-icon-button img {
+    width: 68px;
+    height: 68px;
+  }
+}
+/* 作者コメント */
+.author-comment-box {
+  position: relative;
+
+  margin-top: 32px;
+  padding: 22px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(111, 78, 150, 0.24),
+      rgba(44, 190, 220, 0.1)
+    );
+
+  border: 1px solid rgba(137, 223, 255, 0.32);
+  border-left: 4px solid #76e8ff;
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.author-comment-label {
+  margin: 0 0 10px;
+
+  color: #89edff;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#character-author-comment {
+  margin: 0;
+
+  color: #f4ecf8;
+
+  font-size: 15px;
+  line-height: 1.8;
+}

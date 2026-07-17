@@ -27,10 +27,36 @@
         ラヴィ
       </button>
 
-      <button onclick="showCharacter('sakuraviel')">
-        サクラヴィエル
+      <button onclick="showCharacter('zeal')">
+        ジール
       </button>
     </section>
+
+    <!-- キャラクター選択 -->
+<section class="character-selector">
+  <h2>CHARACTERS</h2>
+  <p class="selector-description">
+    アイコンを選択してください
+  </p>
+
+  <div class="character-icon-list">
+
+    <!-- Ravi -->
+    <button
+      class="character-icon-button active"
+      data-character="ravi"
+      aria-label="Raviを表示"
+    >
+      <img
+        src="./images/icons/ravi-icon.png"
+        alt="Raviのアイコン"
+      >
+
+      <span>Ravi</span>
+    </button>
+
+  </div>
+</section>
 
     <!-- キャラクター表示エリア -->
     <section class="character-card">
@@ -83,9 +109,18 @@
         <h3>キャラクター紹介</h3>
 
         <p id="character-description">
-          常に余裕そうな表情をしているが、実際は冷静で計算高い性格。
-          慌てないが、時折見せる笑顔はどこか不気味で、周囲の人々を惑わせる。
+          常に穏やかな笑みを浮かべる、正体不明の観測者。相手の行動や思考を静かに分析している。敵なのか味方なのか、本心を知る者はいない。
         </p>
+
+        <div class="author-comment-box">
+        <p class="author-comment-label">
+          AUTHOR'S COMMENT
+        </p>
+
+        <p id="character-author-comment">
+          こいつめっちゃ描くの楽だった！！！笑
+        </p>
+      </div>
       </div>
 
     </section>
