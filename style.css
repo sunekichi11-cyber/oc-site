@@ -4,23 +4,23 @@
 }
 
 body{
-    color:#f5f7ff;
+    color:#cad1ee;
 }
 
 .profile span{
-    color:#7fd8ff;
+    color:#1b3b49;
 }
 
 .profile strong{
-    color:white;
+    color:rgb(7, 5, 10);
 }
 
 p{
-    color:#d8dce6;
+    color:#131825;
 }
 
 h2{
-    color:white;
+    color:rgb(58, 53, 65);
 }
 
 /* 上部タイトル */
@@ -182,11 +182,11 @@ main {
 }
 
 .profile strong{
-    color:white;
+    color:rgb(17, 11, 29);
 }
 
 p{
-    color:#d8dce6;
+    color:#010716;
 }
 
 h2{

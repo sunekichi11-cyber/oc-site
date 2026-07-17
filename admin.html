@@ -153,6 +153,43 @@
 
     </section>
 
+    <!-- コード生成エリア -->
+<section class="code-generator">
+
+  <h2>キャラクターコード</h2>
+
+  <p class="code-description">
+    入力内容から characters.js 用のコードを生成します。
+  </p>
+
+  <div class="generator-buttons">
+    <button
+      id="generate-code-button"
+      type="button"
+      class="generate-button"
+    >
+      コードを生成
+    </button>
+
+    <button
+      id="copy-code-button"
+      type="button"
+      class="copy-button"
+    >
+      コードをコピー
+    </button>
+  </div>
+
+  <pre class="generated-code-box"><code id="generated-code">まだコードは生成されていません。</code></pre>
+
+  <p
+    id="copy-message"
+    class="copy-message"
+    aria-live="polite"
+  ></p>
+
+</section>
+
   </main>
 
   <script src="admin.js"></script>
