@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Character Admin</title>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <header class="admin-header">
+    <p class="admin-subtitle">CHARACTER MANAGEMENT</p>
+    <h1>キャラクター管理画面</h1>
+
+    <a href="index.html" class="back-link">
+      ← キャラクターサイトへ戻る
+    </a>
+  </header>
+
+  <main class="admin-layout">
+
+    <!-- 入力エリア -->
+    <section class="admin-panel">
+
+      <h2>キャラクター情報</h2>
+
+      <div class="form-group">
+        <label for="character-id">
+          キャラID
+        </label>
+
+        <input
+          id="character-id"
+          type="text"
+          placeholder="例：ravi"
+        >
+
+        <p class="help-text">
+          半角英数字がおすすめです。
+        </p>
+      </div>
+
+      <div class="form-group">
+        <label for="character-name">
+          英語名
+        </label>
+
+        <input
+          id="character-name"
+          type="text"
+          placeholder="例：Ravi"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="character-name-jp-input">
+          日本語名
+        </label>
+
+        <input
+          id="character-name-jp-input"
+          type="text"
+          placeholder="例：ラヴィ"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="character-gender-input">
+          性別
+        </label>
+
+        <input
+          id="character-gender-input"
+          type="text"
+          placeholder="例：男"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="character-height-input">
+          身長
+        </label>
+
+        <input
+          id="character-height-input"
+          type="text"
+          placeholder="例：243cm"
+        >
+      </div>
+
+    </section>
+
+    <!-- プレビューエリア -->
+    <section class="preview-panel">
+
+      <p class="preview-label">
+        LIVE PREVIEW
+      </p>
+
+      <div class="character-preview">
+
+        <div class="preview-image-area">
+          <div class="image-placeholder">
+            IMAGE
+          </div>
+        </div>
+
+        <div class="preview-info">
+
+          <p class="preview-character-id">
+            ID：<span id="preview-id">未入力</span>
+          </p>
+
+          <h2 id="preview-name">
+            Character Name
+          </h2>
+
+          <p
+            id="preview-name-jp"
+            class="preview-name-jp"
+          >
+            キャラクター名
+          </p>
+
+          <div class="preview-profile">
+
+            <p>
+              <span>性別</span>
+              <strong id="preview-gender">
+                未入力
+              </strong>
+            </p>
+
+            <p>
+              <span>身長</span>
+              <strong id="preview-height">
+                未入力
+              </strong>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="admin.js"></script>
+
+</body>
+</html>
