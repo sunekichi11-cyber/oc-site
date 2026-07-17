@@ -14,13 +14,12 @@ body {
 
   color: white;
 
-  background:
-    radial-gradient(
-      circle at top,
-      #3c173d,
-      #120d1d 55%,
-      #08070d
-    );
+background: radial-gradient(
+    circle at top,
+    #0f3e8e,
+    #060719 60%,
+    #050505
+);
 }
 
 /* 上部タイトル */
@@ -36,7 +35,7 @@ header h1 {
 }
 
 header p {
-  color: #d4bfdc;
+  color: #c0bfdc;
 }
 
 /* メイン部分 */
@@ -110,7 +109,7 @@ main {
   background:
     linear-gradient(
       180deg,
-      rgba(153, 36, 83, 0.25),
+      rgba(36, 59, 153, 0.25),
       rgba(23, 13, 31, 0.2)
     );
 }
@@ -135,7 +134,7 @@ main {
 .character-title {
   margin-bottom: 10px;
 
-  color: #ff8cae;
+  color: #8c8eff;
 
   font-size: 14px;
   font-weight: bold;
@@ -150,13 +149,13 @@ main {
 }
 
 #character-name-jp {
-  color: #cfc2d4;
+  color: #c5c2d4;
 }
 
 .character-info h3 {
   margin-top: 32px;
 
-  color: #ffb2c8;
+  color: #3c35a5;
 }
 
 /* プロフィール一覧 */
@@ -178,7 +177,7 @@ main {
 }
 
 .profile span {
-  color: #bca9c5;
+  color: #979ebb;
 }
 
 .profile strong {
