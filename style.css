@@ -1,0 +1,213 @@
+/* ページ全体 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    "Yu Gothic",
+    "Meiryo",
+    sans-serif;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #3c173d,
+      #120d1d 55%,
+      #08070d
+    );
+}
+
+/* 上部タイトル */
+header {
+  padding: 45px 20px 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 55px);
+  letter-spacing: 5px;
+}
+
+header p {
+  color: #d4bfdc;
+}
+
+/* メイン部分 */
+main {
+  width: min(1100px, 92%);
+  margin: auto;
+  padding-bottom: 60px;
+}
+
+/* キャラ選択ボタン */
+.character-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.character-buttons button {
+  padding: 12px 22px;
+
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.character-buttons button:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* キャラクターカード */
+.character-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) 1fr;
+
+  overflow: hidden;
+
+  background: rgba(20, 14, 29, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 25px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.5);
+
+  backdrop-filter: blur(12px);
+}
+
+/* 立ち絵部分 */
+.character-image-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  min-height: 600px;
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(153, 36, 83, 0.25),
+      rgba(23, 13, 31, 0.2)
+    );
+}
+
+.character-image-area img {
+  display: block;
+
+  width: 100%;
+  max-height: 570px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 20px 20px rgba(0, 0, 0, 0.5));
+}
+
+/* プロフィール部分 */
+.character-info {
+  padding: 45px;
+}
+
+.character-title {
+  margin-bottom: 10px;
+
+  color: #ff8cae;
+
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.character-info h2 {
+  margin: 0;
+
+  font-size: clamp(30px, 5vw, 52px);
+  line-height: 1.05;
+}
+
+#character-name-jp {
+  color: #cfc2d4;
+}
+
+.character-info h3 {
+  margin-top: 32px;
+
+  color: #ffb2c8;
+}
+
+/* プロフィール一覧 */
+.profile {
+  margin-top: 30px;
+}
+
+.profile p {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+
+  gap: 15px;
+
+  margin: 0;
+  padding: 14px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile span {
+  color: #bca9c5;
+}
+
+.profile strong {
+  font-weight: normal;
+}
+
+/* 下部 */
+footer {
+  padding: 25px;
+  text-align: center;
+
+  color: #97899d;
+}
+
+/* スマホ表示 */
+@media screen and (max-width: 750px) {
+  .character-card {
+    grid-template-columns: 1fr;
+  }
+
+  .character-image-area {
+    min-height: 420px;
+  }
+
+  .character-image-area img {
+    max-height: 400px;
+  }
+
+  .character-info {
+    padding: 30px 24px;
+  }
+}
