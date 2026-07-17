@@ -4,27 +4,23 @@
 }
 
 body{
+    color:#f5f7ff;
+}
 
-background:
+.profile span{
+    color:#7fd8ff;
+}
 
-radial-gradient(
-circle at top,
-rgba(176, 214, 255, 0.25),
-transparent 45%
-),
+.profile strong{
+    color:white;
+}
 
-radial-gradient(
-circle at bottom,
-rgba(167, 119, 231, 0.15),
-transparent 40%
-),
+p{
+    color:#d8dce6;
+}
 
-linear-gradient(
-180deg,
-#071026,
-#a7a9b1
-);
-
+h2{
+    color:white;
 }
 
 /* 上部タイトル */
