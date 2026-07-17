@@ -205,4 +205,54 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   });
+  setupCharacterTabs();
 });
+
+/*
+  プロフィール右側のタブ切り替え
+*/
+function setupCharacterTabs() {
+  const tabButtons =
+    document.querySelectorAll(".tab-button");
+
+  const tabContents =
+    document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedTab = button.dataset.tab;
+
+      /*
+        全ボタンからactiveを外し、
+        選択されたボタンだけactiveにします。
+      */
+      tabButtons.forEach((tabButton) => {
+        const isSelected = tabButton === button;
+
+        tabButton.classList.toggle(
+          "active",
+          isSelected
+        );
+
+        tabButton.setAttribute(
+          "aria-selected",
+          String(isSelected)
+        );
+      });
+
+      /*
+        対応するタブ内容だけ表示します。
+      */
+      tabContents.forEach((content) => {
+        const isSelected =
+          content.id === `tab-${selectedTab}`;
+
+        content.hidden = !isSelected;
+        content.classList.toggle(
+          "active",
+          isSelected
+        );
+      });
+    });
+  });
+}

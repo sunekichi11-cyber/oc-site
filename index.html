@@ -69,91 +69,134 @@
         >
       </div>
 
-      <div class="character-info">
-        <p id="character-title" class="character-title">
-          The Silent Observer
-        </p>
+<div class="character-info">
 
-        <h2 id="character-name">
-          Ravi
-        </h2>
+  <p id="character-title" class="character-title">
+    THE SILENT OBSERVER
+  </p>
 
-        <p id="character-name-jp">
-          ラヴィ
-        </p>
+  <h2 id="character-name">Ravi</h2>
 
-        <div class="profile">
-          <p>
-            <span>性別</span>
-            <strong id="character-gender">男</strong>
-          </p>
+  <p id="character-name-jp">ラヴィ</p>
 
-          <p>
-            <span>身長</span>
-            <strong id="character-height">不明</strong>
-          </p>
+  <!-- タブボタン -->
+  <div class="character-tabs" role="tablist">
 
-          <p>
-            <span>所属</span>
-            <strong id="character-group">???</strong>
-          </p>
+    <button
+      class="tab-button active"
+      data-tab="profile"
+      type="button"
+      role="tab"
+      aria-selected="true"
+    >
+      PROFILE
+    </button>
 
-          <p>
-            <span>一人称</span>
-            <strong id="character-first-person">
-            俺
-            </strong>
-          </p>
+    <button
+      class="tab-button"
+      data-tab="speech"
+      type="button"
+      role="tab"
+      aria-selected="false"
+    >
+      SPEECH
+    </button>
 
-          <p>
-            <span>二人称</span>
-            <strong id="character-second-person">
-            君
-            </strong>
-          </p>
+    <button
+      class="tab-button"
+      data-tab="author"
+      type="button"
+      role="tab"
+      aria-selected="false"
+    >
+      AUTHOR
+    </button>
 
-          <p>
-            <span>モチーフ</span>
-            <strong id="character-motif">
-              悪魔
-            </strong>
-          </p>
-        </div>
+  </div>
 
-        <h3>キャラクター紹介</h3>
+  <!-- PROFILEタブ -->
+  <div
+    id="tab-profile"
+    class="tab-content active"
+    role="tabpanel"
+  >
+    <div class="profile">
 
-        <p id="character-description">
-          常に穏やかな笑みを浮かべる、正体不明の観測者。相手の行動や思考を静かに分析している。敵なのか味方なのか、本心を知る者はいない。
-        </p>
+      <p>
+        <span>性別</span>
+        <strong id="character-gender">男</strong>
+      </p>
 
-        <div class="author-comment-box">
-        <p class="author-comment-label">
-          AUTHOR'S COMMENT
-        </p>
+      <p>
+        <span>身長</span>
+        <strong id="character-height">不明</strong>
+      </p>
 
-        <div class="speech-box">
+      <p>
+        <span>所属</span>
+        <strong id="character-group">???</strong>
+      </p>
 
-        <p class="speech-title">
-        SPEECH SAMPLE
-        </p>
+      <p>
+        <span>一人称</span>
+        <strong id="character-first-person">俺</strong>
+      </p>
 
-        <div id="character-speech">
+      <p>
+        <span>二人称</span>
+        <strong id="character-second-person">君</strong>
+      </p>
 
-        <p>「……そうか。」</p>
+      <p>
+        <span>モチーフ</span>
+        <strong id="character-motif">悪魔</strong>
+      </p>
 
-        <p>「俺は別に構わない。」</p>
+    </div>
 
-        <p>「君がそう思うなら、それでいい。」</p>
+    <div class="character-description-area">
+      <h3>キャラクター紹介</h3>
 
-        </div>
+      <p id="character-description">
+        常に穏やかな笑みを浮かべる、正体不明の観測者。
+        相手の行動や思考を静かに分析している。
+      </p>
+    </div>
+  </div>
 
-      </div>
+  <!-- SPEECHタブ -->
+  <div
+    id="tab-speech"
+    class="tab-content"
+    role="tabpanel"
+    hidden
+  >
+    <p class="tab-section-title">SPEECH SAMPLE</p>
 
-        <p id="character-author-comment">
-          こいつめっちゃ描くの楽だった！！！笑
-        </p>
-      </div>
-      </div>
+    <div id="character-speech">
+      <p>「……そうか。」</p>
+      <p>「俺は別に構わない。」</p>
+      <p>「君がそう思うなら、それでいい。」</p>
+    </div>
+  </div>
+
+  <!-- AUTHORタブ -->
+  <div
+    id="tab-author"
+    class="tab-content"
+    role="tabpanel"
+    hidden
+  >
+    <p class="tab-section-title">AUTHOR'S COMMENT</p>
+
+    <div class="author-comment-box">
+      <p id="character-author-comment">
+        こいつめっちゃ描くの楽だった！！！笑
+      </p>
+    </div>
+  </div>
+
+</div>
 
     </section>
 
