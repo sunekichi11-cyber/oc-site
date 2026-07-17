@@ -22,7 +22,7 @@ transparent 40%
 linear-gradient(
 180deg,
 #071026,
-#03050d
+#a7a9b1
 );
 
 }
@@ -85,40 +85,38 @@ main {
 }
 
 /* キャラクターカード */
-.character-card{
+.character-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) 1fr;
 
-position:relative;
+  overflow: hidden;
 
+  background: rgba(20, 14, 29, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 25px;
+
+  box-shadow:
+    0 25px 70px rgba(92, 87, 87, 0.5);
+
+  backdrop-filter: blur(12px);
 }
 
-.character-card::before{
+/* 立ち絵部分 */
+.character-image-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 
-content:"";
+  min-height: 600px;
+  padding: 25px;
 
-position:absolute;
-
-width:700px;
-
-height:700px;
-
-left:50%;
-
-top:50%;
-
-transform:translate(-50%,-50%);
-
-background:radial-gradient(
-
-circle,
-
-rgba(72,155,255,.18),
-
-transparent 70%
-
-);
-
-z-index:-1;
-
+  background:
+    linear-gradient(
+      180deg,
+      rgba(36, 59, 153, 0.25),
+      rgba(23, 13, 31, 0.2)
+    );
 }
 
 .character-image-area img {
@@ -141,7 +139,7 @@ z-index:-1;
 .character-title {
   margin-bottom: 10px;
 
-  color: #8c8eff;
+  color: #d9d9fd;
 
   font-size: 14px;
   font-weight: bold;
@@ -183,12 +181,20 @@ z-index:-1;
     1px solid rgba(255, 255, 255, 0.1);
 }
 
-.profile span {
-  color: #979ebb;
+.profile span{
+    color:#7fd8ff;
 }
 
-.profile strong {
-  font-weight: normal;
+.profile strong{
+    color:white;
+}
+
+p{
+    color:#d8dce6;
+}
+
+h2{
+    color:white;
 }
 
 /* 下部 */
@@ -196,7 +202,7 @@ footer {
   padding: 25px;
   text-align: center;
 
-  color: #97899d;
+  color: #d4c6da;
 }
 
 /* スマホ表示 */
