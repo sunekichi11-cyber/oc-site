@@ -203,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
           behavior: "smooth",
           block: "start"
         });
+        updateActiveButton(characterId);
+        openCharacterTab("profile");
     });
   });
   setupCharacterTabs();
@@ -254,5 +256,39 @@ function setupCharacterTabs() {
         );
       });
     });
+  });
+}
+
+function openCharacterTab(tabName) {
+  const tabButtons =
+    document.querySelectorAll(".tab-button");
+
+  const tabContents =
+    document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach((button) => {
+    const isSelected =
+      button.dataset.tab === tabName;
+
+    button.classList.toggle(
+      "active",
+      isSelected
+    );
+
+    button.setAttribute(
+      "aria-selected",
+      String(isSelected)
+    );
+  });
+
+  tabContents.forEach((content) => {
+    const isSelected =
+      content.id === `tab-${tabName}`;
+
+    content.hidden = !isSelected;
+    content.classList.toggle(
+      "active",
+      isSelected
+    );
   });
 }
